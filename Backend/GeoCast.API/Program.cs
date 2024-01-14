@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<IGeocodingService, GeocodingService>();
+builder.Services.AddHttpClient<IWeatherService, WeatherService>();
 builder.Services.AddControllers();
 
 var app = builder.Build();
