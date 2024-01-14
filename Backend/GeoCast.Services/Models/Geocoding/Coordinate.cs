@@ -2,7 +2,7 @@
 
 namespace GeoCast.Services.Models.Geocoding
 {
-    public class Coordinate
+    public class Coordinates
     {
         [JsonPropertyName("x")]
         public double Longitude { get; set; }
