@@ -4,6 +4,7 @@ namespace GeoCast.Services.Interfaces
 {
     public interface IGeocodingService
     {
-        Task<List<AddressMatch>?> GeocodeAddressAsync(string address);
+        Task<GeocodingResult> GeocodeAddressAsync(string address);
     }
+
 }
