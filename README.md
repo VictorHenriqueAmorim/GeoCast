@@ -26,3 +26,12 @@ A .NET Core and React-based application delivering precise 7-day weather forecas
    - Run `npm install` to install dependencies.
 3. **Running the application:**
    - Run `npm start` to start the React development server.
+  
+## Tested Addresses
+- 4600 Silver Hill Rd, Washington, DC 20233
+- 66-4 Parkhurst Rd, Chelmsford MA 1824
+- 677 Timpany Blvd, Gardner MA 1440
+- 20 Soojian Dr, Leicester MA 1524
+- 5399 W Genesse St, Camillus NY 13031
+- 150 Gold Star Hwy, Groton CT 6340
+- 701 Mcmeans Ave, Bay Minette AL 36507
