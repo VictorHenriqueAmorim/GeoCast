@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, TextField } from "@mui/material";
-import { fetchWeather } from "../../../services/weatherService";
+import { fetchWeather } from "../../../services/WeatherService/weatherService";
 import { WeatherFetcherStyle } from "./styled";
 
 const WeatherFetcher = ({ setWeatherData, setIsLoading, setError }) => {
