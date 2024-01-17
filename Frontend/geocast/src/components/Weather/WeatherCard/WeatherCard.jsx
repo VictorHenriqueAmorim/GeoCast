@@ -4,7 +4,6 @@ import { CardContentStyle, CardStyle } from './styled';
 
 const WeatherCard = ({ forecast }) =>{
 
-
 const getDay = () => {
   let startTime = new Date(forecast.startTime);
   let day = startTime.getDate();
@@ -13,7 +12,7 @@ const getDay = () => {
 }
 
   return (  
-    <CardStyle>
+    <CardStyle data-testid="weather-card">
       <CardMedia
         component="img"
         height="140"
