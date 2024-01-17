@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import WeatherCard from '../WeatherCard/WeatherCard';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import ModeNightIcon from '@mui/icons-material/ModeNight';
-import { FlexContainer, ToggleIconStyle } from './styled';
+import { FlexContainer } from './styled';
 
 const WeatherList = ({ weatherData }) => {
-  const [showDay, setShowDay] = useState(true);
 
   const dayForecasts = weatherData.filter(forecast => 
     !forecast.name.includes('Night') && forecast.name !== 'Tonight'
@@ -16,14 +13,11 @@ const WeatherList = ({ weatherData }) => {
 
   return (
     <div>
-      <ToggleIconStyle onClick={() => setShowDay(!showDay)}>
-        {showDay ? <ModeNightIcon /> : <LightModeIcon />}
-      </ToggleIconStyle>
-      <FlexContainer>
-        {dayForecasts.map(forecast => <WeatherCard key={forecast.number} forecast={forecast} />)}
+      <FlexContainer id='dayCards'>
+        {dayForecasts.map(forecast => <WeatherCard key={forecast.number + forecast.name} forecast={forecast} />)}
       </FlexContainer>
-      <FlexContainer>
-        {nightForecasts.map(forecast => <WeatherCard key={forecast.number} forecast={forecast} />)}
+      <FlexContainer id='nightCards'>
+        {nightForecasts.map(forecast => <WeatherCard key={forecast.number + forecast.name} forecast={forecast} />)}
       </FlexContainer>
     </div>
   );
